@@ -1,20 +1,5 @@
 <template>
   <v-container grid-list-xs >
-    <v-app-bar app color="primary" >
-      <v-spacer></v-spacer>
-      <v-flex xs6 offset-xs-2 style="margin: auto">
-        <v-text-field 
-        v-model="search" 
-        solo
-        clearable 
-        placeholder="Search" 
-        >
-        </v-text-field>
-      </v-flex>
-      <v-spacer></v-spacer>
-     
-    </v-app-bar>
-    <v-divider></v-divider>
     <v-data-table
       :items-per-page="100"
       item-key="name"
@@ -41,11 +26,9 @@
 
 <script>
 export default {
-  props: ["items", "headers"],
+  props: ["items", "headers", "search"],
   data() {
     return {
-      btn: false,
-      search: "",
       expanded: []
     };
   }
