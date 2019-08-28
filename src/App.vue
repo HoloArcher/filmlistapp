@@ -93,7 +93,7 @@ export default {
   async mounted() {
     // this.items = [{ name: "josiah", value: "kek", description: 'why are we still here? Just to suffer? Everyday i can feel my leg, my arm, my fingers. where they used to be' }];
     try {
-      var obj = await axios.get("/api");
+      var obj = await axios.get("/api");  
     } catch (error) {
       console.trace(error);
       var errobj = {
@@ -111,11 +111,11 @@ export default {
 
   data: () => ({
     alert: {
-      on: true,
+      on: false,
       type: "success",
       message: ""
     },
-    search: "pulp fiction",
+    search: "",
     items: [],
     headers: [],
     dialog: false,
